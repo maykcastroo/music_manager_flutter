@@ -1,6 +1,6 @@
 # music_manager
 
-A new Flutter application.
+A very cool flutter application for rating albums.
 
 ## Getting Started
 
