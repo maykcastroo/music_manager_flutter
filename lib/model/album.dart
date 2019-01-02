@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'track.dart';
 
 class Album {
-  final int id;
+  final String id;
   final int rating;
   final String name;
   final String artist;
@@ -30,7 +30,7 @@ class Album {
   Map toJson() => {
     'rating': (rating as int),
     'name': name,
-    'id': (id as int),
+    'id': id,
     'artist': artist,
     'cover': cover,
     'tracks': tracks,

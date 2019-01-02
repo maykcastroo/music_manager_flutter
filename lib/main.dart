@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         title: 'Music Manager',
         home: StoreBuilder<AppState>(
           onInit: (store) => store.dispatch(GetAlbumsAction('pop')),
-          builder: (BuildContext context, Store<AppState> store) => Home(),
+          builder: (BuildContext context, Store<AppState> store) => Home(store),
         )
       ),
     );
