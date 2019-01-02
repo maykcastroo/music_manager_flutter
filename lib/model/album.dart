@@ -1,17 +1,21 @@
 import 'package:flutter/foundation.dart';
 
+import 'track.dart';
+
 class Album {
   final int id;
   final int rating;
   final String name;
   final String artist;
   final String cover;
+  final List<Track> tracks;
 
   Album({
     @required this.id,
     @required this.name,
     @required this.artist,
     @required this.cover,
+    @required this.tracks,
     this.rating = 0,
   });
 
@@ -20,6 +24,7 @@ class Album {
         name = json['name'],
         id = json['favorite'],
         artist = json['duration'],
+        tracks = (json['tracks'] as List).map((i) => Track.fromJson(i)).toList(),
         cover = json['cover'];
 
   Map toJson() => {
@@ -28,6 +33,7 @@ class Album {
     'id': (id as int),
     'artist': artist,
     'cover': cover,
+    'tracks': tracks,
   };
 
   @override
